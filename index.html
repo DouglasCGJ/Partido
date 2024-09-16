@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewport" content="whidth=device-width, initial-scale=1.0">
+        <title>Partido do Corpo Social</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <div id="logo">
+                     <img src="img\logored.png">
+                </div>
+                
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Partido</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Filie-se</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Notícias</a>
+                    </li>
+
+                    <li>
+                        <a href="Contato/index.html">Contato</a>
+                    </li>
+
+                    <li>
+                        <a href="#"><img src="img\lupa.png"></a>
+                    </li>
+                </ul>
+            </nav>
+
+            <section id="one">
+                <div class="carousel">
+                    <div class="slides">
+                        <img src="img\PERCEVERANÇA.png" alt="Imagem 1">
+                        <img src="img\LUTA.png" alt="Imagem 2">
+                        <img src="img\EQUIDADE.png" alt="Imagem 3">
+                    </div>
+                    <div class="carousel-buttons">
+                        <button id="prev">&#10094;</button>
+                        <button id="next">&#10095;</button>
+                    </div>
+                </div>
+                
+                <script>
+                    const slides = document.querySelector('.slides');
+                    const images = document.querySelectorAll('.slides img');
+                    const prevButton = document.getElementById('prev');
+                    const nextButton = document.getElementById('next');
+                
+                    let currentIndex = 0;
+                
+                    function showSlide(index) {
+                        if (index >= images.length) {
+                            currentIndex = 0;
+                        } else if (index < 0) {
+                            currentIndex = images.length - 1;
+                        } else {
+                            currentIndex = index;
+                        }
+                        const offset = -currentIndex * 100;
+                        slides.style.transform = `translateX(${offset}%)`;
+                    }
+                
+                    nextButton.addEventListener('click', () => {
+                        showSlide(currentIndex + 1);
+                    });
+                
+                    prevButton.addEventListener('click', () => {
+                        showSlide(currentIndex - 1);
+                    });
+                
+                    setInterval(() => {
+                        showSlide(currentIndex + 1);
+                    }, 5000);
+                </script>
+
+                <h4>
+                O Partido do Corpo Social (PCS) se apresenta como uma força transformadora no cenário político,
+                comprometido com a construção de uma sociedade mais justa, igualitária e solidária.
+                Fundado sobre os princípios do comunismo, o PCS acredita que o bem-estar coletivo deve estar no 
+                centro de todas as decisões, rejeitando as desigualdades e a exploração que permeiam o sistema atual.
+                </h4>
+                
+            </section>
+
+            <section id="line">
+                <div id="fine"></div>
+            </section>
+
+            <section id="two">
+                    <h3>Plano de Ação do PCS<br>
+                    Redistribuição de Riquezas<br><br></h3>
+                    <h4>O PCS propõe uma profunda reforma econômica, com foco na redistribuição de riquezas. Para o partido, a concentração de recursos nas mãos de poucos é a principal fonte de injustiças sociais. Por isso, defende a nacionalização de setores estratégicos, como a energia, transporte e comunicações, garantindo que os lucros gerados por esses serviços sejam revertidos diretamente para a população.
+                    <br><br>
+                    Educação e Saúde Públicas de Qualidade
+                    A educação e a saúde são pilares centrais na visão do PCS. O partido promete fortalecer o sistema público de ensino, ampliando o acesso a uma educação de qualidade desde a infância até o ensino superior. Na área da saúde, o compromisso é assegurar atendimento gratuito e universal, com investimentos em infraestrutura e formação de profissionais para atender com dignidade a todas as camadas da sociedade.
+                    <br><br>
+                    Participação Popular e Democracia Direta
+                    O PCS acredita que o poder político deve ser exercido diretamente pelo povo, não apenas por meio de representantes eleitos. Assim, propõe mecanismos de democracia direta, como plebiscitos, referendos e conselhos populares, onde a população terá voz ativa nas decisões que impactam suas vidas, desde políticas econômicas até questões locais.
+                    <br><br>
+                    Sustentabilidade e Economia Verde
+                    O compromisso com o meio ambiente também é uma prioridade. O PCS defende a transição para uma economia verde, com incentivos para energias renováveis e produção sustentável. A ideia é criar uma sociedade onde o desenvolvimento econômico não venha à custa do esgotamento dos recursos naturais, mas sim em harmonia com o planeta.
+                    <br><br>
+                    Trabalho e Justiça Social
+                    Com uma visão de valorização do trabalho, o PCS propõe políticas para garantir condições justas para todos os trabalhadores, incluindo o aumento do salário mínimo, a redução da jornada de trabalho sem cortes salariais, e o fortalecimento dos sindicatos. O partido também planeja criar uma rede robusta de proteção social para garantir que ninguém fique à margem da sociedade.</h4>
+            </section>
+
+            <footer>
+                <div id="flogo"> <img src="img\bannerwhite.png" alt=""></div>
+                <h3>DOUGLAS COSTA GOMES DE JESUS</h3>
+            </footer>
+        </header>
+    </body>
+
